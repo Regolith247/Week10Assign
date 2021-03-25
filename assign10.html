@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Assign10.html</title>
+    <link rel='stylesheet' type='text/css' href='assign10.css'>
+    
+<script> 
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myArr = JSON.parse(this.responseText);
+    document.getElementById("demo").innerHTML = myArr[0];
+  }
+};
+xmlhttp.open("GET", "assign10.php", true);
+xmlhttp.send();
+    
+</script>
+</head>
+<body>
+    
+<h1> This should display the PHP code as retrieved by the AJAX request</h1>
+
+
+
+<h2>
+<div id="demo">
+
+    
+</div>
+
+</h2>
+
+</body>
+</html>
+
+
